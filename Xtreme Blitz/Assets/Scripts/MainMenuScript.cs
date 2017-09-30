@@ -24,4 +24,22 @@ public class MainMenuScript : MonoBehaviour {
     {
         SceneManager.LoadScene("2Players_Level1", LoadSceneMode.Single);
     }
+
+
+    public void creditScene()
+    {
+        SceneManager.LoadScene("Credits", LoadSceneMode.Single);
+    }
+
+    public void highScoreScene()
+    {
+        SceneManager.LoadScene("globalHighScores", LoadSceneMode.Single);
+    }
+
+    public void returnToMain()
+    {
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+    }
+
+
 }
