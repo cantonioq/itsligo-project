@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/TitleScreen.unity
+- path: Assets/Scene/Template_Scene.unity
   isLoaded: 1
   isActive: 1
