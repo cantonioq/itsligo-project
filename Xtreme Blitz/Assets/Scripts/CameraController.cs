@@ -5,19 +5,26 @@ using UnityEngine;
 public class CameraController : MonoBehaviour {
 
     public GameObject player;
+    public Transform lookAt;
+    public Transform cameraTransform;
 
     private Vector3 offset;
+    private Camera camera;
 
 	// Use this for initialization
 	void Start ()
     {
-        offset = transform.position - player.transform.position;
+        cameraTransform = transform;
+        camera = Camera.main;
+        //offset = transform.position - lookAt.transform.position;
 	}
 	
 	// Update is called once per frame
 	void LateUpdate ()
     {
-        transform.position = player.transform.position + offset;
+        cameraTransform.position = lookAt.position;
+        
+        //transform.position = player.transform.position + offset;
         //transform.Rotate(Vector3.up, test * Time.deltaTime);
         
 
