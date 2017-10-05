@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scene/TitleScreen.unity
-=======
 - path: Assets/Scene/Shay_Scene.unity
->>>>>>> 591b1525a6237ad92f278a2a6185586ed71912bb
   isLoaded: 1
   isActive: 1
