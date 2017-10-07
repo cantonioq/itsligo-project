@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scene/Template_Scene.unity
-=======
-- path: Assets/Scene/Shay_Scene.unity
->>>>>>> 933c12cefaad8b80233216e104f7aad5daae4b0d
+- path: Assets/Scene/MainMenu.unity
   isLoaded: 1
   isActive: 1

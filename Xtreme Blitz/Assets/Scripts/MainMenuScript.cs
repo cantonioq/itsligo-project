@@ -22,7 +22,23 @@ public class MainMenuScript : MonoBehaviour {
 
     public void TwoPlayers()
     {
-        SceneManager.LoadScene("2Players_Level1", LoadSceneMode.Single);
+        SceneManager.LoadScene("Battle_Level1", LoadSceneMode.Single);
+        PlayerPrefs.SetInt("PlayersPlaying", 2);
+
+    }
+
+    public void ThreePlayers()
+    {
+        SceneManager.LoadScene("Battle_Level1", LoadSceneMode.Single);
+        PlayerPrefs.SetInt("PlayersPlaying", 3);
+
+    }
+
+    public void FourPlayers()
+    {
+        SceneManager.LoadScene("Battle_Level1", LoadSceneMode.Single);
+        PlayerPrefs.SetInt("PlayersPlaying", 4);
+
     }
 
 
