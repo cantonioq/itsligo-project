@@ -27,16 +27,20 @@ public class multiplayerCamera : MonoBehaviour {
 
         if (GetAmountOfPlayers == 3)
         {
+            Player1.rect = new Rect(0.0f, 0.5f, 1.0f, 0.5f);
+            Player2.rect = new Rect(0.0f, 0.0f, 0.5f, 0.5f);
+            Player3.rect = new Rect(0.5f, 0.0f, 0.5f, 0.5f);
             Debug.Log("3 Players");
             Player4.enabled = false;
         }
 
         if(GetAmountOfPlayers == 4)
         {
-            Player1.rect = new Rect(0.5f, 0.5f, 1, 1);
-            Player2.rect = new Rect(0.5f, 0.5f, 1, 1);
-            Player3.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
-            Player4.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
+            Player1.rect = new Rect(0.0f, 0.5f, 0.5f, 0.5f);
+            Player2.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
+            Player3.rect = new Rect(0.0f, 0.0f, 0.5f, 0.5f);
+            Player4.rect = new Rect(0.5f, 0.0f, 0.5f, 0.5f);
+            Debug.Log("4 PLAYERS");
         }
 
         else
