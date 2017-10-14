@@ -4,23 +4,14 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour {
 
-    /*
-    If accessing script [e.g. private PlayerController player;] the script must be attached to the player itslef
-    If using the GameObject can attach script to any object inclusing pause menu canvas which is preffered
-    since it is more structured 
-    THIS SCRIPT IS STILL UNDER DEVELOPMENT BUT WORKS AS IT STANDS
-    */
 
-    private PlayerController player; //access to script in development
-    public Canvas Pause;
-    bool pauseToogle;
-    public GameObject test;
-
+    bool pauseToogle = false;
+    public Canvas pauseMenu;
 
 	// Use this for initialization
 	void Start () {
-        Pause.enabled = false;
-        player = GetComponent<PlayerController>();
+
+        pauseMenu.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -29,25 +20,19 @@ public class PauseMenu : MonoBehaviour {
         //keydown code will be updated for gamepad
         if (Input.GetKeyDown(KeyCode.A))
         {
+            pauseToogle = !pauseToogle;
 
             if (pauseToogle)
             {
-                Pause.enabled = true;
-                player.enabled = false;
-                test.SetActive(false);
+                Time.timeScale = 0f;
+                pauseMenu.enabled = true;
             }
 
             else
             {
-                Pause.enabled = false;
-                player.enabled = true;
-                test.SetActive(true);
+                Time.timeScale = 1.0f;
+                pauseMenu.enabled = false;
             }
-
-            pauseToogle = !pauseToogle;
-        }
-        
-
-        
+        }      
 	}
 }

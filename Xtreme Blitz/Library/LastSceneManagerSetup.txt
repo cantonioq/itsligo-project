@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/BattleMultiplayer/Battle_template.unity
+- path: Assets/Scene/MainMenu/MainMenu.unity
   isLoaded: 1
   isActive: 1

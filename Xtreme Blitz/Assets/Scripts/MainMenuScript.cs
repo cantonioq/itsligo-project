@@ -5,20 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour {
 
-    public Canvas main;
-    public Canvas MP_battle_OR_race;
-    public Canvas MP_battle_ball;
-    public Canvas MP_battle_level;
-    public Canvas MP_Race_level;
 
 	// Use this for initialization
 	void Start () {
-        
-        main.enabled = true;
-        MP_battle_OR_race.enabled = false;
-        MP_battle_ball.enabled = false;
-        MP_battle_level.enabled = false;
-        MP_Race_level.enabled = false;
         
 	}
 	
@@ -38,36 +27,21 @@ public class MainMenuScript : MonoBehaviour {
     {
         //SceneManager.LoadScene("Battle_Level1", LoadSceneMode.Single);
         PlayerPrefs.SetInt("PlayersPlaying", 2);
-        main.enabled = false;
-        MP_battle_OR_race.enabled = true;
-        MP_battle_ball.enabled = false;
-        MP_battle_level.enabled = false;
-        MP_Race_level.enabled = false;
-
+        SceneManager.LoadScene("MainMenu_Battle_or_race_menu", LoadSceneMode.Single);
     }
 
     public void ThreePlayers()
     {
         //SceneManager.LoadScene("Battle_Level1", LoadSceneMode.Single);
         PlayerPrefs.SetInt("PlayersPlaying", 3);
-        main.enabled = false;
-        MP_battle_OR_race.enabled = true;
-        MP_battle_ball.enabled = false;
-        MP_battle_level.enabled = false;
-        MP_Race_level.enabled = false;
-
+        SceneManager.LoadScene("MainMenu_Battle_or_race_menu", LoadSceneMode.Single);
     }
 
     public void FourPlayers()
     {
         //SceneManager.LoadScene("Battle_Level1", LoadSceneMode.Single);
         PlayerPrefs.SetInt("PlayersPlaying", 4);
-        main.enabled = false;
-        MP_battle_OR_race.enabled = true;
-        MP_battle_ball.enabled = false;
-        MP_battle_level.enabled = false;
-        MP_Race_level.enabled = false;
-
+        SceneManager.LoadScene("MainMenu_Battle_or_race_menu", LoadSceneMode.Single);
     }
 
 
@@ -90,20 +64,12 @@ public class MainMenuScript : MonoBehaviour {
 
     public void BattleButton()
     {
-        main.enabled = false;
-        MP_battle_OR_race.enabled = false;
-        MP_battle_ball.enabled = false; //turn to true to be able to select ball player (under development)
-        MP_battle_level.enabled = true;
-        MP_Race_level.enabled = false;
+        SceneManager.LoadScene("MainMenu_Battle_level_selector", LoadSceneMode.Single);
     }
 
     public void RaceButton()
     {
-        main.enabled = false;
-        MP_battle_OR_race.enabled = false;
-        MP_battle_ball.enabled = false;
-        MP_battle_level.enabled = false;
-        MP_Race_level.enabled = true;
+        SceneManager.LoadScene("MainMenu_Race_level_selector", LoadSceneMode.Single);
     }
 
     //MP_battle_ball button on click functions
