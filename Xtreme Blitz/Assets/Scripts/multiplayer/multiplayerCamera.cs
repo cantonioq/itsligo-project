@@ -4,43 +4,50 @@ using UnityEngine;
 
 public class multiplayerCamera : MonoBehaviour {
 
-    public Camera Player1;
-    public Camera Player2;
-    public Camera Player3;
-    public Camera Player4;
+    public Camera Camera1;
+    public Camera Camera2;
+    public Camera Camera3;
+    public Camera Camera4;
+
+    public GameObject Player1;
+    public GameObject Player2;
+    public GameObject Player3;
+    public GameObject Player4;
 
     int GetAmountOfPlayers;
 
 	// Use this for initialization
-	void Start () {
+	void Start () {       
 
         GetAmountOfPlayers = PlayerPrefs.GetInt("PlayersPlaying");
 
         if (GetAmountOfPlayers == 2)
         {
-            Debug.Log("2 Players");
-            Player1.rect = new Rect(0.0f, 0.0f, 0.5f, 1);
-            Player2.rect = new Rect(0.5f, 0.0f, 0.5f, 1);
-            Player3.enabled = false;
-            Player4.enabled = false;
+            Camera1.rect = new Rect(0.0f, 0.0f, 0.5f, 1);
+            Camera2.rect = new Rect(0.5f, 0.0f, 0.5f, 1);
+            Camera3.enabled = false;
+            Camera4.enabled = false;
+
+            Player3.SetActive(false);
+            Player4.SetActive(false);
         }
 
         if (GetAmountOfPlayers == 3)
         {
-            Player1.rect = new Rect(0.0f, 0.5f, 1.0f, 0.5f);
-            Player2.rect = new Rect(0.0f, 0.0f, 0.5f, 0.5f);
-            Player3.rect = new Rect(0.5f, 0.0f, 0.5f, 0.5f);
-            Debug.Log("3 Players");
-            Player4.enabled = false;
+            Camera1.rect = new Rect(0.0f, 0.5f, 1.0f, 0.5f);
+            Camera2.rect = new Rect(0.0f, 0.0f, 0.5f, 0.5f);
+            Camera3.rect = new Rect(0.5f, 0.0f, 0.5f, 0.5f);
+            Camera4.enabled = false;
+
+            Player4.SetActive(false);
         }
 
         if(GetAmountOfPlayers == 4)
         {
-            Player1.rect = new Rect(0.0f, 0.5f, 0.5f, 0.5f);
-            Player2.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
-            Player3.rect = new Rect(0.0f, 0.0f, 0.5f, 0.5f);
-            Player4.rect = new Rect(0.5f, 0.0f, 0.5f, 0.5f);
-            Debug.Log("4 PLAYERS");
+            Camera1.rect = new Rect(0.0f, 0.5f, 0.5f, 0.5f);
+            Camera2.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
+            Camera3.rect = new Rect(0.0f, 0.0f, 0.5f, 0.5f);
+            Camera4.rect = new Rect(0.5f, 0.0f, 0.5f, 0.5f);
         }
 
         else
