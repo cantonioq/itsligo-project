@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EnnemyController : MonoBehaviour
+public class FloorCollisionScript : MonoBehaviour
 {
 
     // Use this for initialization

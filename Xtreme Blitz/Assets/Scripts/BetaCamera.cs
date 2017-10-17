@@ -16,7 +16,8 @@ public class BetaCamera : MonoBehaviour {
 
     void LateUpdate()
     {
-        offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * turnSpeed, Vector3.up) * offset;
+        //offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * turnSpeed, Vector3.up) * offset;
+        offset = Quaternion.AngleAxis(Input.GetAxis("HorizontalRight") * turnSpeed, Vector3.up) * offset;
         transform.position = player.position + offset;
         transform.LookAt(player.position);
     }
