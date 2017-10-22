@@ -44,6 +44,11 @@ public class MainMenuScript : MonoBehaviour {
         SceneManager.LoadScene("MainMenu_Battle_or_race_menu", LoadSceneMode.Single);
     }
 
+    public void BattleOrRaceMenu()
+    {
+        SceneManager.LoadScene("MainMenu_Battle_or_race_menu", LoadSceneMode.Single);
+    }
+
 
     public void creditScene()
     {

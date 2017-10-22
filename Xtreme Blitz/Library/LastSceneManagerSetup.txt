@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scene/BattleMultiplayer/Battle_template.unity
-=======
-- path: Assets/Scene/Shay_Scene.unity
->>>>>>> 9bc7d84bd4075d65c8ecf092b3e0e3605ae5b217
+- path: Assets/Scene/globalHighScores.unity
   isLoaded: 1
   isActive: 1

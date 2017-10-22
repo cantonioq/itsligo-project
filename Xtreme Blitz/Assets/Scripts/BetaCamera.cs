@@ -5,8 +5,8 @@ using UnityEngine;
 public class BetaCamera : MonoBehaviour {
 
     public float turnSpeed = 4.0f;
-    public Transform player;
-
+    public static Transform player;
+   
     public Vector3 offset;
 
     void Start()
@@ -20,5 +20,6 @@ public class BetaCamera : MonoBehaviour {
         offset = Quaternion.AngleAxis(Input.GetAxis("HorizontalRight") * turnSpeed, Vector3.up) * offset;
         transform.position = player.position + offset;
         transform.LookAt(player.position);
+
     }
 }
