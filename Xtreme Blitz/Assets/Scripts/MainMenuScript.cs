@@ -163,5 +163,11 @@ public class MainMenuScript : MonoBehaviour {
         SceneManager.LoadScene("Race_Level4", LoadSceneMode.Single);
     }
 
+    void OnMouseOver()
+    {
+        //If your mouse hovers over the GameObject with the script attached, output this message
+        Debug.Log("Mouse is over GameObject.");
+    }
+
 
 }
