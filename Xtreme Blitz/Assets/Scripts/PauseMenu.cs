@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
 
@@ -18,7 +19,7 @@ public class PauseMenu : MonoBehaviour {
 	void Update () {
 		
         //keydown code will be updated for gamepad
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick 1 button 7"))
         {
             pauseToogle = !pauseToogle;
 
@@ -33,6 +34,18 @@ public class PauseMenu : MonoBehaviour {
                 Time.timeScale = 1.0f;
                 pauseMenu.enabled = false;
             }
-        }      
+        }  
+            
 	}
+
+    public void OnClickResumeGame()
+    {
+        Time.timeScale = 1.0f;
+        pauseMenu.enabled = false;
+    }
+
+    public void OnClickQuitGame()
+    {
+        SceneManager.LoadScene("TitleScreen", LoadSceneMode.Single);
+    }
 }
