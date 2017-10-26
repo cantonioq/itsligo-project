@@ -11,7 +11,7 @@ public class PlayerController1 : MonoBehaviour {
     void Start ()
     {
         rb = GetComponent<Rigidbody>();
-	}
+    }
 
 
     void FixedUpdate()
@@ -23,4 +23,7 @@ public class PlayerController1 : MonoBehaviour {
         rb.AddForce(movement * Speed); //adds speed to the player's movement
     }
 
+
 }
+
+

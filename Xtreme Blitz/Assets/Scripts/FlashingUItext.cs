@@ -10,6 +10,8 @@ public class FlashingUItext : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        Time.timeScale = 1; // this is required otherwise the scripts does not reactivate when player quits game
+        //and goes to the main menu
 
         flashingText = gameObject.GetComponent<Text>();
 

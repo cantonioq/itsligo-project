@@ -52,6 +52,12 @@ public class uiData : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+        
+        if (Application.loadedLevelName == "TitleScreen")
+        {
+            Destroy(gameObject);
+        }
+        
     }
 
     void Awake()

@@ -5,7 +5,7 @@ using UnityEngine;
 public class BetaCamera : MonoBehaviour {
 
     public float turnSpeed = 4.0f;
-    public static Transform player;
+    public Transform player;
    
     public Vector3 offset;
 
