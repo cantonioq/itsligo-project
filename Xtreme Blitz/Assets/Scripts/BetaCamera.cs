@@ -11,7 +11,7 @@ public class BetaCamera : MonoBehaviour {
 
     void Start()
     {
-        offset = new Vector3(player.position.x, player.position.y + 0.0f, player.position.z - 10.0f);
+        offset = new Vector3(player.position.x, player.position.y + 0.0f, player.position.z - 0.0f);
     }
 
     void LateUpdate()
