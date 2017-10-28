@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BetaCamera : MonoBehaviour {
+public class CameraControllerPlayer1 : MonoBehaviour {
 
-    public float turnSpeed = 4.0f;
+    private float turnSpeed = 3.0f;
     public Transform player;
-   
+
     public Vector3 offset;
 
     void Start()
     {
-        offset = new Vector3(player.position.x, player.position.y + 0.0f, player.position.z - 0.0f);
+        offset = new Vector3(player.position.x + 36.0f, player.position.y - 240.0f, player.position.z - 124.0f);
     }
 
     void LateUpdate()

@@ -13,14 +13,20 @@ public class PlayerController1 : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
     }
 
+    void Update()
+    {
+        
+    }
 
     void FixedUpdate()
     {
         float moveHorizontal = Input.GetAxis("Horizontal"); //controls the player on the y axis with the left joystick
         float moveVertical = Input.GetAxis("Vertical");//controls the playre on the x axis with the left joystick
 
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical); //moves the player 
+        Vector3 movement = new Vector3(moveHorizontal , 0.0f, moveVertical); //moves the player 
         rb.AddForce(movement * Speed); //adds speed to the player's movement
+        //transform.position += transform.forward * Time.deltaTime * Speed;
+        transform.forward = Camera.main.transform.forward;
     }
 
 
