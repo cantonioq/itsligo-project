@@ -63,6 +63,8 @@
      <Compile Include="Assets\Scripts\high score\DisplayHighscores.cs" />
      <Compile Include="Assets\Scripts\high score\Highscores.cs" />
      <Compile Include="Assets\Scripts\high score\PostScore.cs" />
+     <Compile Include="Assets\Scripts\multiplayer\CameraControllerPlayer1.cs" />
+     <Compile Include="Assets\Scripts\multiplayer\CameraControllerPlayer2.cs" />
      <Compile Include="Assets\Scripts\multiplayer\IntroLevel.cs" />
      <Compile Include="Assets\Scripts\multiplayer\PlayerController1.cs" />
      <Compile Include="Assets\Scripts\multiplayer\PlayerController2.cs" />
