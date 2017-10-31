@@ -83,9 +83,12 @@
     <Compile Include="Assets\Scripts\FlashingUItext.cs" />
     <Compile Include="Assets\Scripts\FloorCollisionScript.cs" />
     <Compile Include="Assets\Scripts\MainMenuScript.cs" />
+    <Compile Include="Assets\Scripts\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\MusicMainMenu.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\RotatingBarrel.cs" />
+    <Compile Include="Assets\Scripts\RotatingPlane.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\collectibles\CollectibleController.cs" />
     <Compile Include="Assets\Scripts\collectibles\CollectibleExplosion.cs" />
@@ -95,10 +98,14 @@
     <Compile Include="Assets\Scripts\multiplayer\CameraControllerPlayer1.cs" />
     <Compile Include="Assets\Scripts\multiplayer\CameraControllerPlayer2.cs" />
     <Compile Include="Assets\Scripts\multiplayer\IntroLevel.cs" />
+    <Compile Include="Assets\Scripts\multiplayer\MultiplayerCollectiblePowerUpScale.cs" />
+    <Compile Include="Assets\Scripts\multiplayer\MultiplayerRotatingObject.cs" />
+    <Compile Include="Assets\Scripts\multiplayer\MultiplayerScalingObject.cs" />
     <Compile Include="Assets\Scripts\multiplayer\PlayerController1.cs" />
     <Compile Include="Assets\Scripts\multiplayer\PlayerController2.cs" />
     <Compile Include="Assets\Scripts\multiplayer\PlayerController3.cs" />
     <Compile Include="Assets\Scripts\multiplayer\PlayerController4.cs" />
+    <Compile Include="Assets\Scripts\multiplayer\RandomPositionPowerupCollectibles.cs" />
     <Compile Include="Assets\Scripts\multiplayer\multiplayerCamera.cs" />
     <Compile Include="Assets\Scripts\multiplayer\multiplayerController.cs" />
     <Compile Include="Assets\Scripts\titleScreen.cs" />
