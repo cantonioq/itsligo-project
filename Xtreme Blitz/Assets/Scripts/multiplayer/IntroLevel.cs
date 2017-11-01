@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IntroLevel : MonoBehaviour {
 
@@ -8,12 +9,22 @@ public class IntroLevel : MonoBehaviour {
     public float speedOfRotation = 15.0f;//a speed modifier
     private Vector3 point;//the coordinates to the point where the camera looks at
 
-    public static float IntroCountdownTimer = 11.0f; //time in seconds for intro scene view of level
+    public static float IntroCountdownTimer = 25.0f; //time in seconds for intro scene view of level
 
     public GameObject playerController1;
     public GameObject playerController2;
     public GameObject playerController3;
     public GameObject playerController4;
+
+    //for the images countdown numbers (3,2,1,start)
+    public RawImage three;
+    public RawImage two;
+    public RawImage one;
+    public RawImage go;
+
+    public AudioSource music;
+
+    public ParticleSystem test;
 
 
     // Use this for initialization
@@ -30,6 +41,11 @@ public class IntroLevel : MonoBehaviour {
         playerController3.GetComponent<PlayerController3>().enabled = false;
         playerController4.GetComponent<PlayerController4>().enabled = false;
 
+        three.enabled = false;
+        two.enabled = false;
+        one.enabled = false;
+        go.enabled = false;
+
     }
 
     // Update is called once per frame
@@ -40,14 +56,45 @@ public class IntroLevel : MonoBehaviour {
         transform.RotateAround(target.transform.position, Vector3.up, speedOfRotation * Time.deltaTime);
 
 
+        if (IntroCountdownTimer < 4.0f)
+        {
+            three.enabled = true;
+            music.volume = 0.8f;
+        }
+
+        if (IntroCountdownTimer < 3.0f)
+        {
+            three.enabled = false;
+            two.enabled = true;
+            music.volume = 0.6f;
+        }
+
+        if(IntroCountdownTimer < 2.0f)
+        {
+            two.enabled = false;
+            one.enabled = true;
+            music.volume = 0.4f;
+        }
+
+        if (IntroCountdownTimer < 1.0f)
+        {
+            one.enabled = false;
+            go.enabled = true;
+            music.volume = 0.2f;
+        }
+
         if (IntroCountdownTimer < 0.1f)
         {
+            music.volume = 0;
+            go.enabled = false;
             playerController1.GetComponent<PlayerController1>().enabled = true;
             playerController2.GetComponent<PlayerController2>().enabled = true;
             playerController3.GetComponent<PlayerController3>().enabled = true;
             playerController4.GetComponent<PlayerController4>().enabled = true;
 
+            test.enableEmission = false;
         }
+
     }
 
 
