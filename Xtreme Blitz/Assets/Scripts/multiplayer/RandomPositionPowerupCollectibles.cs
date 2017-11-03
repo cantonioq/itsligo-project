@@ -12,6 +12,8 @@ public class RandomPositionPowerupCollectibles : MonoBehaviour {
     private int terrainLength; // terrain size (z)
     private int terrainPosX; // terrain position x
     private int terrainPosZ; // terrain position z
+
+    public float heightOfPowerUps = 0.0f;
     void Start()
     {
         // terrain size x
@@ -36,8 +38,9 @@ public class RandomPositionPowerupCollectibles : MonoBehaviour {
             // get the terrain height at the random position
             float posy = Terrain.activeTerrain.SampleHeight(new Vector3(posx, 0, posz));
             // create new gameObject on random position
-            GameObject newObject = (GameObject)Instantiate(objectToPlace, new Vector3(posx, posy, posz), Quaternion.identity);
+            GameObject newObject = Instantiate(objectToPlace, new Vector3(posx, posy + heightOfPowerUps, posz), Quaternion.identity);
             currentObjects += 1;
+            Debug.Log("Current Objects: " + currentObjects);
         }
         if (currentObjects == numberOfObjects)
         {

@@ -9,7 +9,7 @@ public class IntroLevel : MonoBehaviour {
     public float speedOfRotation = 15.0f;//a speed modifier
     private Vector3 point;//the coordinates to the point where the camera looks at
 
-    public static float IntroCountdownTimer = 25.0f; //time in seconds for intro scene view of level
+    public float IntroCountdownTimer = 25.0f; //time in seconds for intro scene view of level
 
     public GameObject playerController1;
     public GameObject playerController2;
@@ -55,8 +55,14 @@ public class IntroLevel : MonoBehaviour {
 
         transform.RotateAround(target.transform.position, Vector3.up, speedOfRotation * Time.deltaTime);
 
+        if ((Input.GetKeyDown("enter")) || (Input.GetKeyDown("joystick 1 button 7")) || (Input.GetKeyDown("joystick 1 button 0")))
+        {
+            IntroCountdownTimer = 4.1f;
+            Destroy(gameObject,IntroCountdownTimer);
+        }
 
-        if (IntroCountdownTimer < 4.0f)
+
+            if (IntroCountdownTimer < 4.0f)
         {
             three.enabled = true;
             music.volume = 0.8f;

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MultiplayerRotatingObject : MonoBehaviour {
 
-    public int speed;
+    public int y;
+    public int z;
 
 	// Use this for initialization
 	void Start () {
@@ -13,6 +14,6 @@ public class MultiplayerRotatingObject : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Rotate(0, 0, speed * Time.deltaTime); //rotates 50 degrees per second around z axis
+        transform.Rotate(0, y, z * Time.deltaTime); //rotates 50 degrees per second around z axis
     }
 }

@@ -4,22 +4,21 @@ using UnityEngine;
 
 public class CameraControllerPlayer4 : MonoBehaviour {
 
-    private float turnSpeed = 3.0f;
-    public Transform player;
+    public GameObject player4;
+    public float turnSpeed = 1.0f;
 
-    public Vector3 offset;
+    private Vector3 offset;
 
     void Start()
     {
-        offset = new Vector3(player.position.x, player.position.y, player.position.z);
+        offset = transform.position - player4.transform.position;
     }
 
     void LateUpdate()
     {
-        //offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * turnSpeed, Vector3.up) * offset;
         offset = Quaternion.AngleAxis(Input.GetAxis("HorizontalRight4") * turnSpeed, Vector3.up) * offset;
-        transform.position = player.position + offset;
-        transform.LookAt(player.position);
+        transform.position = player4.transform.position + offset;
+        transform.LookAt(player4.transform.position);
 
     }
 }
