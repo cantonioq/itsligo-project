@@ -57,39 +57,39 @@ public class IntroLevel : MonoBehaviour {
 
         if ((Input.GetKeyDown("enter")) || (Input.GetKeyDown("joystick 1 button 7")) || (Input.GetKeyDown("joystick 1 button 0")))
         {
-            IntroCountdownTimer = 4.1f;
+            IntroCountdownTimer = 4.9f;
             Destroy(gameObject,IntroCountdownTimer);
         }
 
 
-            if (IntroCountdownTimer < 4.0f)
+            if (IntroCountdownTimer < 4.9f)
         {
             three.enabled = true;
             music.volume = 0.8f;
         }
 
-        if (IntroCountdownTimer < 3.0f)
+        if (IntroCountdownTimer < 3.9f)
         {
             three.enabled = false;
             two.enabled = true;
             music.volume = 0.6f;
         }
 
-        if(IntroCountdownTimer < 2.0f)
+        if(IntroCountdownTimer < 2.9f)
         {
             two.enabled = false;
             one.enabled = true;
             music.volume = 0.4f;
         }
 
-        if (IntroCountdownTimer < 1.0f)
+        if (IntroCountdownTimer < 1.9f)
         {
             one.enabled = false;
             go.enabled = true;
             music.volume = 0.2f;
         }
 
-        if (IntroCountdownTimer < 0.1f)
+        if (IntroCountdownTimer < 0.9f)
         {
             music.volume = 0;
             go.enabled = false;
