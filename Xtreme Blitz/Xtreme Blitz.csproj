@@ -149,6 +149,7 @@
     <Compile Include="Assets\Scripts\multiplayer\CameraController\CameraControllerPlayer3.cs" />
     <Compile Include="Assets\Scripts\multiplayer\CameraController\CameraControllerPlayer4.cs" />
     <Compile Include="Assets\Scripts\multiplayer\IntroLevel.cs" />
+    <Compile Include="Assets\Scripts\multiplayer\MovingTrain.cs" />
     <Compile Include="Assets\Scripts\multiplayer\MultiplayerCollectiblePowerUpScale.cs" />
     <Compile Include="Assets\Scripts\multiplayer\MultiplayerFloorCollision.cs" />
     <Compile Include="Assets\Scripts\multiplayer\MultiplayerRotatingObject.cs" />
@@ -207,6 +208,7 @@
     <None Include="Assets\Particles\Shared\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\Sound\multiplayerBattle\5 Action Chiptunes By Juhani Junkala\INFO.txt" />
     <None Include="Assets\Textures\Textures_skybox\Readme for Assigning.txt" />
+    <None Include="Assets\UnityStoreAssets\Nature pack\Materials\Standard.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
