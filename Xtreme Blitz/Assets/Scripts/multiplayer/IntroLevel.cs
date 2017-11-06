@@ -98,7 +98,6 @@ public class IntroLevel : MonoBehaviour {
             playerController3.GetComponent<PlayerController3>().enabled = true;
             playerController4.GetComponent<PlayerController4>().enabled = true;
 
-            test.enableEmission = false;
         }
 
     }

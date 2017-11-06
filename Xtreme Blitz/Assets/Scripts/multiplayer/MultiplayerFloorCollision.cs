@@ -18,7 +18,8 @@ public class MultiplayerFloorCollision : MonoBehaviour {
 
 
     int GetAmountOfPlayers;
-    int [] PlayersDead = new int[4] {0,0,0,0,} ;
+    public int [] PlayersDead = new int[4] {0,0,0,0,} ;
+    public int okok;
 
     private float endTimer = 5.0f;
 
@@ -41,7 +42,29 @@ public class MultiplayerFloorCollision : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (PlayersDead[0] == 1)
+        {
+            Destroy(GameObject.Find("Player1"));
+            PlayerOneGameOver.enabled = true;
+        }
 
+        if (PlayersDead[1] == 1)
+        {
+            Destroy(GameObject.Find("Player2"));
+            PlayerTwoGameOver.enabled = true;
+        }
+
+        if (PlayersDead[2] == 1)
+        {
+            Destroy(GameObject.Find("Player3"));
+            PlayerThreeGameOver.enabled = true;
+        }
+
+        if (PlayersDead[3] == 1)
+        {
+            Destroy(GameObject.Find("Player4"));
+            PlayerFourGameOver.enabled = true;
+        }
     }
 
 
@@ -57,29 +80,21 @@ public class MultiplayerFloorCollision : MonoBehaviour {
 
         if (other.gameObject.name == "Player1")
         {
-            Destroy(GameObject.Find("Player1"));
-            PlayerOneGameOver.enabled = true;
             PlayersDead[0] += 1;
         }
 
         if (other.gameObject.name == "Player2")
         {
-            Destroy(GameObject.Find("Player2"));
-            PlayerTwoGameOver.enabled = true;
             PlayersDead[1] += 1;
         }
 
         if (other.gameObject.name == "Player3")
         {
-            Destroy(GameObject.Find("Player3"));
-            PlayerThreeGameOver.enabled = true;
             PlayersDead[2] += 1;
         }
 
         if (other.gameObject.name == "Player4")
         {
-            Destroy(GameObject.Find("Player4"));
-            PlayerFourGameOver.enabled = true;
             PlayersDead[3] += 1;
         }
         //2 players

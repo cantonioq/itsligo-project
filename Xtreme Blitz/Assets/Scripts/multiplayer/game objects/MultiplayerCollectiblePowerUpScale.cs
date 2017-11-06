@@ -6,6 +6,11 @@ public class MultiplayerCollectiblePowerUpScale : MonoBehaviour {
 
     int newCollectible = 0;
 
+    //public AudioClip CollectibleSound; 
+
+    public AudioSource audioSource;
+    public static PowerUpParticle Instance;
+
     // Use this for initialization
     void Start () {
 
@@ -17,10 +22,14 @@ public class MultiplayerCollectiblePowerUpScale : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
+        //AudioSource.PlayClipAtPoint(CollectibleSound, transform.position);
+        audioSource.Play();
 
-        other.transform.localScale += new Vector3(0.25f,0.25f, 0.25f); // increases values still in development 
+        other.transform.localScale += new Vector3(0.20f,0.20f, 0.20f); // increases values still in development 
         Destroy(gameObject);
         newCollectible += 1;
         GameObject.Find("Collectible Multiplayer Powerup").GetComponent<RandomPositionPowerupCollectibles>().numberOfObjects += 1;
+
+        PowerUpParticle.Instance.Explosion(transform.position);
     }
 }

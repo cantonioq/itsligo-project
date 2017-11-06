@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MultiplayerScalingObject : MonoBehaviour {
+public class MultiplayerScalePlaneBattleScene2 : MonoBehaviour {
 
-    public float scale;
-    public float minimumScale;
-    public float maximumScale;
+    public float scale = 1.0f;
+    public float minimumScale = 0.5f;
+    public float maximumScale = 4.0f;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -26,5 +26,6 @@ public class MultiplayerScalingObject : MonoBehaviour {
         {
             scale -= 0.05f;
         }
+
     }
 }
