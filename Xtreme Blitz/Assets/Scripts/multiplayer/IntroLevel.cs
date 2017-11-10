@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+File            IntroLevel.cs
+Author          Antonio Quesnel
+Date            11/10/2017  
+Version         1.0 
+Description:    
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,6 +24,8 @@ public class IntroLevel : MonoBehaviour {
     public GameObject playerController3;
     public GameObject playerController4;
 
+    public GameObject gameLevelMusic;
+
     //for the images countdown numbers (3,2,1,start)
     public RawImage three;
     public RawImage two;
@@ -23,8 +33,6 @@ public class IntroLevel : MonoBehaviour {
     public RawImage go;
 
     public AudioSource music;
-
-    public ParticleSystem test;
 
 
     // Use this for initialization
@@ -91,13 +99,16 @@ public class IntroLevel : MonoBehaviour {
 
         if (IntroCountdownTimer < 0.9f)
         {
-            music.volume = 0;
+            music.Stop();
             go.enabled = false;
             playerController1.GetComponent<PlayerController1>().enabled = true;
             playerController2.GetComponent<PlayerController2>().enabled = true;
             playerController3.GetComponent<PlayerController3>().enabled = true;
             playerController4.GetComponent<PlayerController4>().enabled = true;
 
+            gameLevelMusic.GetComponent<LevelGameMusic>().enabled = true;
+
+           
         }
 
     }

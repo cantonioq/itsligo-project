@@ -150,6 +150,7 @@
     <Compile Include="Assets\Scripts\multiplayer\CameraController\CameraControllerPlayer4.cs" />
     <Compile Include="Assets\Scripts\multiplayer\CameraController\multiplayerCamera.cs" />
     <Compile Include="Assets\Scripts\multiplayer\IntroLevel.cs" />
+    <Compile Include="Assets\Scripts\multiplayer\LevelGameMusic.cs" />
     <Compile Include="Assets\Scripts\multiplayer\MultiplayerFloorCollision.cs" />
     <Compile Include="Assets\Scripts\multiplayer\MultiplayerRotatingObject.cs" />
     <Compile Include="Assets\Scripts\multiplayer\MultiplayerScalePlaneBattleScene2.cs" />

@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+File            CameraControllerPlayer2.cs
+Author          Antonio Quesnel
+Date            11/10/2017  
+Version         1.0 
+Description:    
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

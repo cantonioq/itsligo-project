@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: 5278ff29b5c1da84995635fe77ecf2bb
-timeCreated: 1509908033
+timeCreated: 1510340737
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - PowerDownCollectible: {fileID: 198000012777718758, guid: acf39d9f4addf294d93fa56fa373961b,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

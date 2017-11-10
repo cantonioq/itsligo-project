@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+File            titleScreen.cs
+Author          Antonio Quesnel
+Date            11/10/2017  
+Version         1.0 
+Description:    Script for Title Scene
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;

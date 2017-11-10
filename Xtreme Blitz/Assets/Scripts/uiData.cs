@@ -1,14 +1,20 @@
-﻿using System.Collections;
+﻿/*
+File            uiData.cs
+Author          Antonio Quesnel
+Date            11/10/2017  
+Version         1.0 
+Description:    This script is to allow to store the points and lives remaining from scene
+                to scene by using DontDestroyOnLoad in unity. When the player does submit the 
+                score and then is transported to the highscore scene this script will destroy the
+                points and lives from the RAM on the computer.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-/*This script is to allow to store the points and lives remaining from scene
- to scene by using DontDestroyOnLoad in unity. When the player does submit the 
- score and then is transported to the highscore scene this script will destroy the
- points and lives from the RAM on the computer.
- */
 public class uiData : MonoBehaviour {
 
     public Text countPoints;
