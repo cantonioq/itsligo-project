@@ -31,7 +31,7 @@ public class CameraController : MonoBehaviour {
     void LateUpdate ()
     {
         transform.position = player.transform.position + offset;
-
+        transform.LookAt(player.transform.position);
         //transform.position = lookAt.transform.position + offset;
         //transform.Rotate(Vector3.up, test * Time.deltaTime);           
 
