@@ -204,6 +204,7 @@
     <None Include="Assets\Particles\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
     <None Include="Assets\Particles\Shared\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\Sound\multiplayerBattle\5 Action Chiptunes By Juhani Junkala\INFO.txt" />
+    <None Include="Assets\Sound\multiplayerBattle\killstreak\scream credits.txt" />
     <None Include="Assets\Textures\Textures_skybox\Readme for Assigning.txt" />
     <None Include="Assets\UnityStoreAssets\Nature pack\Materials\Standard.shader" />
   </ItemGroup>

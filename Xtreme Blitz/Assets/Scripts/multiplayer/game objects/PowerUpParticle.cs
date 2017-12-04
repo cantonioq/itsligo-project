@@ -19,7 +19,7 @@ public class PowerUpParticle : MonoBehaviour {
 
     void Awake()
     {
-        // Register the singleton
+        //// Register the singleton
         if (Instance != null)
         {
             Debug.LogError("Multiple instances of SpecialEffectsHelper!");
