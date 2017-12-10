@@ -18,14 +18,15 @@ public class Highscores : MonoBehaviour
         instance = this;
     }
 
-    public static void AddNewHighscore(string username, float score)
+    public static void AddNewHighscore(string username, float score, float time)
     {
-        instance.StartCoroutine(instance.UploadNewHighscore(username, score));
+        instance.StartCoroutine(instance.UploadNewHighscore(username, score, time));
     }
 
-    IEnumerator UploadNewHighscore(string username, float score)
+    IEnumerator UploadNewHighscore(string username, float score, float time)
     {
-        WWW www = new WWW(webURL + privateCode + "/add/" + WWW.EscapeURL(username) + "/" + score);
+        WWW www = new WWW(webURL + privateCode + "/add/" + WWW.EscapeURL(username) + "/" + score
+            + "/" + time);
         yield return www;
 
         if (string.IsNullOrEmpty(www.error))
@@ -70,8 +71,10 @@ public class Highscores : MonoBehaviour
             string[] entryInfo = entries[i].Split(new char[] { '|' });
             string username = entryInfo[0];
             int score = int.Parse(entryInfo[1]);
-            highscoresList[i] = new Highscore(username, score);
-            print(highscoresList[i].username + ": " + highscoresList[i].score);
+            int time = int.Parse(entryInfo[2]);
+            highscoresList[i] = new Highscore(username, score, time);
+            print(highscoresList[i].username + ": " + highscoresList[i].score + ": "
+                + highscoresList[i].time);
         }
     }
 
@@ -81,11 +84,13 @@ public struct Highscore
 {
     public string username;
     public int score;
+    public int time;
 
-    public Highscore(string _username, int _score)
+    public Highscore(string _username, int _score, int _time)
     {
         username = _username;
         score = _score;
+        time = _time;
     }
 
 }

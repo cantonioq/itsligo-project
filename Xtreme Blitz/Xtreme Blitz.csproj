@@ -76,6 +76,21 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="ProBuilderCore-Unity5">
+      <HintPath>Assets\ProCore\ProBuilder\Classes\ProBuilderCore-Unity5.dll</HintPath>
+    </Reference>
+    <Reference Include="ProBuilderMeshOps-Unity5">
+      <HintPath>Assets\ProCore\ProBuilder\Classes\ProBuilderMeshOps-Unity5.dll</HintPath>
+    </Reference>
+    <Reference Include="KdTreeLib">
+      <HintPath>Assets\ProCore\ProBuilder\Classes\ClassesLib\KdTreeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="pb_Stl">
+      <HintPath>Assets\ProCore\ProBuilder\Classes\ClassesLib\pb_Stl.dll</HintPath>
+    </Reference>
+    <Reference Include="Poly2Tri">
+      <HintPath>Assets\ProCore\ProBuilder\Classes\ClassesLib\Poly2Tri.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Particles\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
@@ -127,6 +142,12 @@
     <Compile Include="Assets\Particles\Shared\Scripts\GunShoot.cs" />
     <Compile Include="Assets\Particles\Shared\Scripts\ParticleExamples.cs" />
     <Compile Include="Assets\Particles\Shared\Scripts\ParticleMenu.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Procedural Mesh\ExtrudeRandomEdges.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
     <Compile Include="Assets\Scripts\BetaCamera.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\FlashingUItext.cs" />
@@ -138,12 +159,23 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\RotatingBarrel.cs" />
     <Compile Include="Assets\Scripts\RotatingPlane.cs" />
-    <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\collectibles\CollectibleController.cs" />
     <Compile Include="Assets\Scripts\collectibles\CollectibleExplosion.cs" />
     <Compile Include="Assets\Scripts\high score\DisplayHighscores.cs" />
     <Compile Include="Assets\Scripts\high score\Highscores.cs" />
     <Compile Include="Assets\Scripts\high score\PostScore.cs" />
+    <Compile Include="Assets\Scripts\high score\single player\level1\DisplayHighscoresLevelOne.cs" />
+    <Compile Include="Assets\Scripts\high score\single player\level1\HighscoresLevelOne.cs" />
+    <Compile Include="Assets\Scripts\high score\single player\level1\PostScoreLevelOne.cs" />
+    <Compile Include="Assets\Scripts\high score\single player\level2\DisplayHighscoresLevelTwo.cs" />
+    <Compile Include="Assets\Scripts\high score\single player\level2\HighscoresLevelTwo.cs" />
+    <Compile Include="Assets\Scripts\high score\single player\level2\PostScoreLevelTwo.cs" />
+    <Compile Include="Assets\Scripts\high score\single player\level3\DisplayHighscoresLevelThree.cs" />
+    <Compile Include="Assets\Scripts\high score\single player\level3\HighscoresLevelThree.cs" />
+    <Compile Include="Assets\Scripts\high score\single player\level3\PostScoreLevelThree.cs" />
+    <Compile Include="Assets\Scripts\high score\single player\level4\DisplayHighscoresLevelFour.cs" />
+    <Compile Include="Assets\Scripts\high score\single player\level4\HighscoresLevelFour.cs" />
+    <Compile Include="Assets\Scripts\high score\single player\level4\PostScoreLevelFour.cs" />
     <Compile Include="Assets\Scripts\multiplayer\CameraController\CameraControllerPlayer1.cs" />
     <Compile Include="Assets\Scripts\multiplayer\CameraController\CameraControllerPlayer2.cs" />
     <Compile Include="Assets\Scripts\multiplayer\CameraController\CameraControllerPlayer3.cs" />
@@ -171,6 +203,10 @@
     <Compile Include="Assets\Scripts\multiplayer\killstreak\birdPooCollision.cs" />
     <Compile Include="Assets\Scripts\multiplayer\killstreak\killstreakSeagull.cs" />
     <Compile Include="Assets\Scripts\multiplayer\multiplayerController.cs" />
+    <Compile Include="Assets\Scripts\singleplayer End Scene\endSceneLevelFour.cs" />
+    <Compile Include="Assets\Scripts\singleplayer End Scene\endSceneLevelOne.cs" />
+    <Compile Include="Assets\Scripts\singleplayer End Scene\endSceneLevelThree.cs" />
+    <Compile Include="Assets\Scripts\singleplayer End Scene\endSceneLevelTwo.cs" />
     <Compile Include="Assets\Scripts\titleScreen.cs" />
     <Compile Include="Assets\Scripts\uiData.cs" />
   </ItemGroup>
@@ -216,6 +252,28 @@
     <None Include="Assets\Particles\PostProcessing\Resources\Shaders\Uber.shader" />
     <None Include="Assets\Particles\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
     <None Include="Assets\Particles\Shared\Shaders\SurfaceShader_VC.shader" />
+    <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
+    <None Include="Assets\ProCore\ProBuilder\About\Font\SIL Open Font License.txt" />
+    <None Include="Assets\ProCore\ProBuilder\About\ThirdPartyLicenses.txt" />
+    <None Include="Assets\ProCore\ProBuilder\About\changelog.txt" />
+    <None Include="Assets\ProCore\ProBuilder\About\pc_AboutEntry_ProBuilder.txt" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseTextureBlend.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseVertexColor.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_FaceHighlight.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_FacePicker.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_HideVertices.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_NormalPreview.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_ReferenceUnlit.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_ScrollHighlight.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_SelectionPicker.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_StandardVertexColor.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitSolidColor.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitVertexColor.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexPicker.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexShader.shader" />
+    <None Include="Assets\ProCore\ProBuilder\readme.txt" />
     <None Include="Assets\Sound\multiplayerBattle\5 Action Chiptunes By Juhani Junkala\INFO.txt" />
     <None Include="Assets\Sound\multiplayerBattle\killstreak\scream credits.txt" />
     <None Include="Assets\Textures\Textures_skybox\Readme for Assigning.txt" />

@@ -14,49 +14,69 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class uiData : MonoBehaviour {
 
-    public Text countPoints;
-    public float points;
+    //public Text countPoints needed for online databse to rank time
+    public float pointsInternal;
+    public int points;
 
-    public Text countLives;
-    public float lives;
+    public Text countTime;
+    public float timeInternal;
+    public int time;
+
+    bool counterSwitch = true;
 
     public static uiData holder;
 
-
-    void setCountPoints()
+    void setCountTime()
     {
-        countPoints.text = "Score: " + points.ToString();
-    }
-
-    void setCountLives()
-    {
-        countLives.text = "Lives: " + lives.ToString();
+        countTime.text = "Time: " + time.ToString();
     }
 
     // Use this for initialization
     void Start()
     {
-
-        points = 0; //value 0 for starting points
-        setCountPoints();
-
-        lives = 3; //starting lives for player
-        setCountLives();
+        timeInternal = 0;
+        pointsInternal = 10000;
+        setCountTime();       
     }
 
     // Update is called once per frame
     void Update()
     {
-        setCountPoints();
-        setCountLives();
+        if (counterSwitch == true)
+        {
+            timeInternal += Time.deltaTime;
+            pointsInternal -= Time.deltaTime;
+        }
+
+        setCountTime();
+
+        //converts the floats into int values
+        time = (int)Math.Ceiling(timeInternal);
+        points = (int)Math.Ceiling(pointsInternal);
+
+        if (Application.loadedLevelName == "level1end")
+        {
+            //stops the deltatime
+            counterSwitch = false;
+        }
+
+        if (Application.loadedLevelName == "gameover")
+        {
+            //stops the deltatime
+            counterSwitch = false;
+        }
+
+
+        // points += Time.deltaTime;
 
         //verifies if level is highscore, if so deletes points ans lives in ram
         if (Application.loadedLevelName == "globalHighScores")
         {
-            Destroy(gameObject);
+            Destroy(gameObject);                       
         }
         
         if (Application.loadedLevelName == "TitleScreen")

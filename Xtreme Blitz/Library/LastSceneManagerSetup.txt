@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scene/BattleMultiplayer/Battle_Level4.unity
-=======
-- path: Assets/Scene/Level 3.unity
->>>>>>> 581bf8d25bb2d8db7596f124275ee954a1a3af1c
+- path: Assets/Scene/TitleScreen.unity
   isLoaded: 1
   isActive: 1

@@ -21,7 +21,9 @@ public class PostScore : MonoBehaviour {
 
     public void scoresubmit()
     {
-        Highscores.AddNewHighscore(username.text, GameObject.Find("UI DATA").GetComponent<uiData>().points);
+        Highscores.AddNewHighscore(username.text, 
+            GameObject.Find("UI DATA").GetComponent<uiData>().points,
+            GameObject.Find("UI DATA").GetComponent<uiData>().time);
         // SceneManager.LoadScene("mainMenu");
         //StartCoroutine(MyCoroutine());
         StartCoroutine(SceneLoadDelay());

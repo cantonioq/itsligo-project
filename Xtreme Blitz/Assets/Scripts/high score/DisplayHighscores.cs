@@ -27,7 +27,8 @@ public class DisplayHighscores : MonoBehaviour
             highscoreFields[i].text = i + 1 + ". ";
             if (i < highscoreList.Length)
             {
-                highscoreFields[i].text += highscoreList[i].username + " - " + highscoreList[i].score;
+                highscoreFields[i].text += highscoreList[i].username + /*" - " + highscoreList[i].score +*/ 
+                    " - " + highscoreList[i].time + " Seconds";
             }
         }
     }

@@ -37,7 +37,7 @@ public class CollectibleController : MonoBehaviour {
             //plays laser shoot sound
             AudioSource.PlayClipAtPoint(CollectibleSound, transform.position);
 
-            GameObject.Find("UI DATA").GetComponent<uiData>().points += 100.0f;
+           // GameObject.Find("UI DATA").GetComponent<uiData>().points += 100.0f;
             CollectibleExplosion.Instance.Explosion(transform.position);
             //Destroy(other.gameObject);
             Destroy(gameObject);
