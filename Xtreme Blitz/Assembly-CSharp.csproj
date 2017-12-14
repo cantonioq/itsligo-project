@@ -112,12 +112,23 @@
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\RotatingBarrel.cs" />
      <Compile Include="Assets\Scripts\RotatingPlane.cs" />
-     <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\collectibles\CollectibleController.cs" />
      <Compile Include="Assets\Scripts\collectibles\CollectibleExplosion.cs" />
      <Compile Include="Assets\Scripts\high score\DisplayHighscores.cs" />
      <Compile Include="Assets\Scripts\high score\Highscores.cs" />
      <Compile Include="Assets\Scripts\high score\PostScore.cs" />
+     <Compile Include="Assets\Scripts\high score\single player\level1\DisplayHighscoresLevelOne.cs" />
+     <Compile Include="Assets\Scripts\high score\single player\level1\HighscoresLevelOne.cs" />
+     <Compile Include="Assets\Scripts\high score\single player\level1\PostScoreLevelOne.cs" />
+     <Compile Include="Assets\Scripts\high score\single player\level2\DisplayHighscoresLevelTwo.cs" />
+     <Compile Include="Assets\Scripts\high score\single player\level2\HighscoresLevelTwo.cs" />
+     <Compile Include="Assets\Scripts\high score\single player\level2\PostScoreLevelTwo.cs" />
+     <Compile Include="Assets\Scripts\high score\single player\level3\DisplayHighscoresLevelThree.cs" />
+     <Compile Include="Assets\Scripts\high score\single player\level3\HighscoresLevelThree.cs" />
+     <Compile Include="Assets\Scripts\high score\single player\level3\PostScoreLevelThree.cs" />
+     <Compile Include="Assets\Scripts\high score\single player\level4\DisplayHighscoresLevelFour.cs" />
+     <Compile Include="Assets\Scripts\high score\single player\level4\HighscoresLevelFour.cs" />
+     <Compile Include="Assets\Scripts\high score\single player\level4\PostScoreLevelFour.cs" />
      <Compile Include="Assets\Scripts\multiplayer\CameraController\CameraControllerPlayer1.cs" />
      <Compile Include="Assets\Scripts\multiplayer\CameraController\CameraControllerPlayer2.cs" />
      <Compile Include="Assets\Scripts\multiplayer\CameraController\CameraControllerPlayer3.cs" />
@@ -141,7 +152,14 @@
      <Compile Include="Assets\Scripts\multiplayer\game objects\PowerDownParticle.cs" />
      <Compile Include="Assets\Scripts\multiplayer\game objects\PowerUpParticle.cs" />
      <Compile Include="Assets\Scripts\multiplayer\game objects\RandomPositionPowerupCollectibles.cs" />
+     <Compile Include="Assets\Scripts\multiplayer\killstreak\SeagullShot.cs" />
+     <Compile Include="Assets\Scripts\multiplayer\killstreak\birdPooCollision.cs" />
+     <Compile Include="Assets\Scripts\multiplayer\killstreak\killstreakSeagull.cs" />
      <Compile Include="Assets\Scripts\multiplayer\multiplayerController.cs" />
+     <Compile Include="Assets\Scripts\singleplayer End Scene\endSceneLevelFour.cs" />
+     <Compile Include="Assets\Scripts\singleplayer End Scene\endSceneLevelOne.cs" />
+     <Compile Include="Assets\Scripts\singleplayer End Scene\endSceneLevelThree.cs" />
+     <Compile Include="Assets\Scripts\singleplayer End Scene\endSceneLevelTwo.cs" />
      <Compile Include="Assets\Scripts\titleScreen.cs" />
      <Compile Include="Assets\Scripts\uiData.cs" />
      <None Include="Assets\Particles\PostProcessing\Resources\Shaders\DepthOfField.shader" />
@@ -208,6 +226,7 @@
      <None Include="Assets\ProCore\ProBuilder\readme.txt" />
      <None Include="Assets\Particles\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
      <None Include="Assets\Particles\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
+     <None Include="Assets\Sound\multiplayerBattle\killstreak\scream credits.txt" />
      <None Include="Assets\Particles\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
  <Reference Include="UnityEngine.UI">
@@ -234,17 +253,17 @@
  <Reference Include="ProBuilderCore-Unity5">
  <HintPath>C:/Users/neon/Documents/itsligo-project/Xtreme Blitz/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
  </Reference>
- <Reference Include="pb_Stl">
- <HintPath>C:/Users/neon/Documents/itsligo-project/Xtreme Blitz/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
- </Reference>
- <Reference Include="Poly2Tri">
- <HintPath>C:/Users/neon/Documents/itsligo-project/Xtreme Blitz/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
- </Reference>
  <Reference Include="ProBuilderMeshOps-Unity5">
  <HintPath>C:/Users/neon/Documents/itsligo-project/Xtreme Blitz/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
  </Reference>
  <Reference Include="KdTreeLib">
  <HintPath>C:/Users/neon/Documents/itsligo-project/Xtreme Blitz/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+ </Reference>
+ <Reference Include="pb_Stl">
+ <HintPath>C:/Users/neon/Documents/itsligo-project/Xtreme Blitz/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+ </Reference>
+ <Reference Include="Poly2Tri">
+ <HintPath>C:/Users/neon/Documents/itsligo-project/Xtreme Blitz/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

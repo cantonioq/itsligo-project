@@ -5,8 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour {
 
     public GameObject player;
-    //public Transform lookAt;
-    //public Transform cameraTransform;
+    public float cameraTurnSpeed = 4.0f;
 
     private Vector3 offset;
     //private Camera camera;
@@ -35,8 +34,12 @@ public class CameraController : MonoBehaviour {
         //transform.position = lookAt.transform.position + offset;
         //transform.Rotate(Vector3.up, test * Time.deltaTime);           
 
-        transform.rotation = Quaternion.Euler(x, y, 0); //allows the camera to be rotated on the x and y axis
-        
+        //transform.rotation = Quaternion.Euler(x, y, 0); //allows the camera to be rotated on the x and y axis
+
+        offset = Quaternion.AngleAxis(Input.GetAxis("HorizontalRight") * cameraTurnSpeed, Vector3.up) * offset;
+        //transform.position = player.transform.position + offset;
+        //transform.LookAt(player.transform.position);
+
 
     }
 }

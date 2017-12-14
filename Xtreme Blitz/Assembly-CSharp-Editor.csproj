@@ -194,6 +194,7 @@
      <None Include="Assets\ProCore\ProBuilder\readme.txt" />
      <None Include="Assets\Particles\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
      <None Include="Assets\Particles\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
+     <None Include="Assets\Sound\multiplayerBattle\killstreak\scream credits.txt" />
      <None Include="Assets\Particles\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
  <Reference Include="Assembly-UnityScript">
@@ -256,6 +257,12 @@
  <Reference Include="ProBuilderCore-Unity5">
  <HintPath>C:/Users/neon/Documents/itsligo-project/Xtreme Blitz/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
  </Reference>
+ <Reference Include="ProBuilderMeshOps-Unity5">
+ <HintPath>C:/Users/neon/Documents/itsligo-project/Xtreme Blitz/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+ </Reference>
+ <Reference Include="KdTreeLib">
+ <HintPath>C:/Users/neon/Documents/itsligo-project/Xtreme Blitz/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+ </Reference>
  <Reference Include="pb_Stl">
  <HintPath>C:/Users/neon/Documents/itsligo-project/Xtreme Blitz/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
  </Reference>
@@ -264,12 +271,6 @@
  </Reference>
  <Reference Include="ProBuilderEditor-Unity5">
  <HintPath>C:/Users/neon/Documents/itsligo-project/Xtreme Blitz/Assets/ProCore/ProBuilder/Editor/ProBuilderEditor-Unity5.dll</HintPath>
- </Reference>
- <Reference Include="ProBuilderMeshOps-Unity5">
- <HintPath>C:/Users/neon/Documents/itsligo-project/Xtreme Blitz/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
- </Reference>
- <Reference Include="KdTreeLib">
- <HintPath>C:/Users/neon/Documents/itsligo-project/Xtreme Blitz/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

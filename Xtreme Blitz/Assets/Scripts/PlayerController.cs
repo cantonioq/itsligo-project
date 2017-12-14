@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour {
         float moveHorizontal = Input.GetAxis("Horizontal"); //controls the player on the y axis with the left joystick
         float moveVertical = Input.GetAxis("Vertical");//controls the playre on the x axis with the left joystick
 
-        Vector3 movement = (fromCameraToMe * moveVertical +mainCamera.transform.right * moveHorizontal) * Speed;
+        Vector3 movement = (fromCameraToMe * moveVertical + mainCamera.transform.right * moveHorizontal) * Speed;
          
         rb. AddForce(movement * Speed); //adds speed to the player's movement
     }
