@@ -58,13 +58,18 @@ public class uiData : MonoBehaviour {
         time = (int)Math.Ceiling(timeInternal);
         points = (int)Math.Ceiling(pointsInternal);
 
-        if (Application.loadedLevelName == "level1end")
+        //if (Application.loadedLevelName == "level1end")
+        if (SceneManager.GetActiveScene().name == "level1end"  ||
+            SceneManager.GetActiveScene().name == "level2end" ||
+            SceneManager.GetActiveScene().name == "level3end" ||
+            SceneManager.GetActiveScene().name == "level4end")
         {
             //stops the deltatime
             counterSwitch = false;
         }
 
-        if (Application.loadedLevelName == "gameover")
+        //if (Application.loadedLevelName == "gameover")
+        if(SceneManager.GetActiveScene().name == "gameover")
         {
             //stops the deltatime
             counterSwitch = false;
@@ -74,12 +79,12 @@ public class uiData : MonoBehaviour {
         // points += Time.deltaTime;
 
         //verifies if level is highscore, if so deletes points ans lives in ram
-        if (Application.loadedLevelName == "globalHighScores")
+        if (SceneManager.GetActiveScene().name == "globalHighScores")
         {
             Destroy(gameObject);                       
         }
         
-        if (Application.loadedLevelName == "TitleScreen")
+        if (SceneManager.GetActiveScene().name == "TitleScreen")
         {
             Destroy(gameObject);
         }
