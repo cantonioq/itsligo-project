@@ -7,6 +7,8 @@ public class PlayerController2 : MonoBehaviour {
     private Rigidbody rb;
     public float Speed; //speed variable for the player
     public GameObject Camera2;
+    public bool SizeMassPlus = false;
+    public bool SizeMassMinus = false;
 
     // Use this for initialization
     void Start()
@@ -16,7 +18,34 @@ public class PlayerController2 : MonoBehaviour {
 
     void Update()
     {
+        increaseSpeedMass();
+        decreaseSpeedMass();
+    }
 
+    private void decreaseSpeedMass()
+    {
+        if (SizeMassMinus == true)
+        {
+            if (Speed > 7.9f)
+            {
+                rb.mass -= 5.0f;
+                Speed -= 3.0f;
+            }
+            SizeMassMinus = false;
+        }
+    }
+
+    private void increaseSpeedMass()
+    {
+        if (SizeMassPlus == true)
+        {
+            if (Speed < 60)
+            {
+                rb.mass += 5.0f;
+                Speed += 3.0f;
+            }
+            SizeMassPlus = false;
+        }
     }
 
     void FixedUpdate()

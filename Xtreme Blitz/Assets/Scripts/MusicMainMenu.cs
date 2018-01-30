@@ -3,7 +3,11 @@ File            MusicMainMenu.cs
 Author          Antonio Quesnel
 Date            11/10/2017  
 Version         1.0 
-Description:    
+Description:    This scrip is attached to "Main" in the title screen scene
+                which makes it that the music will continue to play when 
+                it goes to other main menu scenes. Once a actual game scene
+                in the update method is detected it destroys the game object
+                "Music" which in thus stops the main menu music from playing    
 */
 
 using System.Collections;
@@ -21,18 +25,20 @@ public class MusicMainMenu : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Application.loadedLevelName == "Level1" ||
-            Application.loadedLevelName == "Level2" ||
-            Application.loadedLevelName == "Level3" ||
-            Application.loadedLevelName == "Level4" ||
-            Application.loadedLevelName == "Battle_Level1" ||
-            Application.loadedLevelName == "Battle_Level2" ||
-            Application.loadedLevelName == "Battle_Level3" ||
-            Application.loadedLevelName == "Battle_Level4" ||
-            Application.loadedLevelName == "Race_Level1" ||
-            Application.loadedLevelName == "Race_Level2" ||
-            Application.loadedLevelName == "Race_Level3" ||
-            Application.loadedLevelName == "Race_Level4")
+        if (SceneManager.GetActiveScene().name == "Level1" ||
+            SceneManager.GetActiveScene().name == "Level1" ||
+            SceneManager.GetActiveScene().name == "Level2" ||
+            SceneManager.GetActiveScene().name == "Level3" ||
+            SceneManager.GetActiveScene().name == "Level4" ||
+            SceneManager.GetActiveScene().name == "Battle_Level1" ||
+            SceneManager.GetActiveScene().name == "Battle_Level2" ||
+            SceneManager.GetActiveScene().name == "Battle_Level3" ||
+            SceneManager.GetActiveScene().name == "Battle_Level4" ||
+            SceneManager.GetActiveScene().name == "Race_Level1" ||
+            SceneManager.GetActiveScene().name == "Race_Level2" ||
+            SceneManager.GetActiveScene().name == "Race_Level3" ||
+            SceneManager.GetActiveScene().name == "Race_Level4"             
+            )
         {
             Destroy(gameObject);
         }

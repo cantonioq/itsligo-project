@@ -26,7 +26,7 @@ public class killstreakSeagull : MonoBehaviour {
             if (time < -37.0f)
             {
                 transform.position  = new Vector3(4000.0f, transform.position.y, transform.position.z);
-                time += Random.Range(50.0f, 250.0f);
+                time += Random.Range(50.0f, 80.0f);
                 Debug.Log("got target");
                 soundSwitch = false;
             }

@@ -33,7 +33,28 @@ public class MultiplayerCollectiblePowerUpScale : MonoBehaviour {
         //AudioSource.PlayClipAtPoint(CollectibleSound, transform.position);
         audioSource.Play();
 
-        other.transform.localScale += new Vector3(0.20f,0.20f, 0.20f); // increases values still in development 
+
+        if (other.gameObject.name == "Player1")
+        {
+            GameObject.Find("Player1").GetComponent<PlayerController1>().SizeMassPlus = true;
+        }
+
+        if (other.gameObject.name == "Player2")
+        {
+            GameObject.Find("Player2").GetComponent<PlayerController2>().SizeMassPlus = true;
+        }
+
+        if (other.gameObject.name == "Player3")
+        {
+            GameObject.Find("Player3").GetComponent<PlayerController3>().SizeMassPlus = true;
+        }
+
+        if (other.gameObject.name == "Player4")
+        {
+            GameObject.Find("Player4").GetComponent<PlayerController4>().SizeMassPlus = true;
+        }
+
+        other.transform.localScale += new Vector3(0.10f,0.10f, 0.10f); // increases values still in development 
         Destroy(gameObject);
         newCollectible += 1;
         GameObject.Find("Collectible Multiplayer Powerup").GetComponent<RandomPositionPowerupCollectibles>().numberOfObjects += 1;

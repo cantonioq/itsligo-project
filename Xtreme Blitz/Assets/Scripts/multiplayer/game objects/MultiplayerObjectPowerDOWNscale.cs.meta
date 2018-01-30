@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: 238c39a299680b74c954fa04dd68f4c2
-timeCreated: 1509815517
+timeCreated: 1517346778
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - audioSource: {fileID: 82877859340576338, guid: 4b30d5cfe6f291f45bd7d7c653bfb105,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

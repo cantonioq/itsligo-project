@@ -7,6 +7,8 @@ public class PlayerController1 : MonoBehaviour {
     private Rigidbody rb;
     public float Speed; //speed variable for the player
     public GameObject Camera1;
+    public bool SizeMassPlus = false;
+    public bool SizeMassMinus = false;
 
     // Use this for initialization
     void Start ()
@@ -16,7 +18,34 @@ public class PlayerController1 : MonoBehaviour {
 
     void Update()
     {
-        
+        increaseSpeedMass();
+        decreaseSpeedMass();
+    }
+
+    private void decreaseSpeedMass()
+    {
+        if (SizeMassMinus == true)
+        {
+            if(Speed > 7.9f)
+            {
+                rb.mass -= 5.0f;
+                Speed -= 3.0f;
+            }
+            SizeMassMinus = false;
+        }
+    }
+
+    private void increaseSpeedMass()
+    {
+        if (SizeMassPlus == true)
+        {
+            if(Speed < 60)
+            {
+                rb.mass += 5.0f;
+                Speed += 3.0f;
+            }
+            SizeMassPlus = false;
+        }
     }
 
     void FixedUpdate()
@@ -31,10 +60,7 @@ public class PlayerController1 : MonoBehaviour {
         //Vector3 movement = new Vector3(moveHorizontal , 0.0f, moveVertical); //moves the player 
         Vector3 movement = (fromCameraToMe * moveVertical + Camera1.transform.right * moveHorizontal) * Speed; 
         rb.AddForce(movement * Speed); //adds speed to the player's movement
-        
-        
-        //transform.position += transform.forward * Time.deltaTime * Speed;
-        //transform.forward = Camera.main.transform.forward;
+
     }
 
 

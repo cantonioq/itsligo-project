@@ -6,7 +6,7 @@ public class Player3_Max_Min_Scaling : MonoBehaviour {
 
     private float scale = 1.0f;
     private float minimumScale = 0.5f;
-    private float maximumScale = 4.0f;
+    private float maximumScale = 2.0f;
 
 	// Use this for initialization
 	void Start () {
