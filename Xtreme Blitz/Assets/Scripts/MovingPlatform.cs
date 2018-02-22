@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+  Author: Shay Pitcher
+  Function: To move a platform from one position to another 
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
