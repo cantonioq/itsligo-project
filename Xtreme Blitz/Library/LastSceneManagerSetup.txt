@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/BattleMultiplayer/Battle_Level3.unity
+- path: Assets/Scene/MainMenu/MainMenu_Battle_or_race_menu.unity
   isLoaded: 1
   isActive: 1
