@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scene/MainMenu/MainMenu_Battle_or_race_menu.unity
-=======
-- path: Assets/Scene/Level4.unity
->>>>>>> 09793a22cb3c72942eb843bce7972878d8452a9c
+- path: Assets/Scene/SinglePlayerLevelSelect.unity
   isLoaded: 1
   isActive: 1
