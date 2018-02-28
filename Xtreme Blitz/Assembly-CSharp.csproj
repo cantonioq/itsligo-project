@@ -112,6 +112,7 @@
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\RotatingBarrel.cs" />
      <Compile Include="Assets\Scripts\RotatingPlane.cs" />
+     <Compile Include="Assets\Scripts\SinglePlayerSelectMenu.cs" />
      <Compile Include="Assets\Scripts\collectibles\CollectibleController.cs" />
      <Compile Include="Assets\Scripts\collectibles\CollectibleExplosion.cs" />
      <Compile Include="Assets\Scripts\high score\DisplayHighscores.cs" />
@@ -134,6 +135,7 @@
      <Compile Include="Assets\Scripts\multiplayer\CameraController\CameraControllerPlayer3.cs" />
      <Compile Include="Assets\Scripts\multiplayer\CameraController\CameraControllerPlayer4.cs" />
      <Compile Include="Assets\Scripts\multiplayer\CameraController\multiplayerCamera.cs" />
+     <Compile Include="Assets\Scripts\multiplayer\DirectionalLightChanger.cs" />
      <Compile Include="Assets\Scripts\multiplayer\IntroLevel.cs" />
      <Compile Include="Assets\Scripts\multiplayer\LevelGameMusic.cs" />
      <Compile Include="Assets\Scripts\multiplayer\MultiplayerFloorCollision.cs" />

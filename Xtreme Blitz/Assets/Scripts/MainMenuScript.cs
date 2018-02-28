@@ -28,7 +28,7 @@ public class MainMenuScript : MonoBehaviour {
 
     public void SinglePlayer()
     {
-        SceneManager.LoadScene("Level2", LoadSceneMode.Single);
+        SceneManager.LoadScene("SinglePlayerLevelSelect", LoadSceneMode.Single);
     }
 
     public void TwoPlayers()
