@@ -25,7 +25,7 @@ public class MusicMainMenu : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (SceneManager.GetActiveScene().name == "Level1" ||
+        if (SceneManager.GetActiveScene().name == "Shay_Scene" ||
             SceneManager.GetActiveScene().name == "Level1" ||
             SceneManager.GetActiveScene().name == "Level2" ||
             SceneManager.GetActiveScene().name == "Level3" ||
