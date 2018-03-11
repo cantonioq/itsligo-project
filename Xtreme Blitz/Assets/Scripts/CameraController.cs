@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ Authour: Shay Pitcher
+
+ Function: The main camera follows the player and can be rotated left,right, and down.
+
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,15 +14,12 @@ public class CameraController : MonoBehaviour {
     public float cameraTurnSpeed = 4.0f;
 
     private Vector3 offset;
-    //private Camera camera;
     float x; // variable for the camera's x axis
     float y; // variable for the camera's y axis
 
     // Use this for initialization
     void Start ()
     {
-        //cameraTransform = transform;
-        //camera = Camera.main;
         offset = transform.position - player.transform.position;
     }
 
@@ -26,20 +29,12 @@ public class CameraController : MonoBehaviour {
         y += Input.GetAxis("CameraVertical"); //controls the camera's y axis using the right joystick
     }
 
-    // Update is called once per frame
     void LateUpdate ()
     {
         transform.position = player.transform.position + offset;
         transform.LookAt(player.transform.position);
-        //transform.position = lookAt.transform.position + offset;
-        //transform.Rotate(Vector3.up, test * Time.deltaTime);           
-
-        //transform.rotation = Quaternion.Euler(x, y, 0); //allows the camera to be rotated on the x and y axis
 
         offset = Quaternion.AngleAxis(Input.GetAxis("HorizontalRight") * cameraTurnSpeed, Vector3.up) * offset;
-        //transform.position = player.transform.position + offset;
-        //transform.LookAt(player.transform.position);
-
 
     }
 }

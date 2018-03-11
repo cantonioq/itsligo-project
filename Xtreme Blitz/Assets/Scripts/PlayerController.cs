@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ Authour: Shay Pitcher
+
+ Function: Allows the player to move and be controlled using a gamepad.
+
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +14,6 @@ public class PlayerController : MonoBehaviour {
     public float Speed; //speed variable for the player
     public GameObject mainCamera;
 
-    // Use this for initialization
     void Start ()
     {
         rb = GetComponent<Rigidbody>();
