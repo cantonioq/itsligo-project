@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ Authour: Shay Pitcher
+
+ Function: Loads all single player levels.
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;

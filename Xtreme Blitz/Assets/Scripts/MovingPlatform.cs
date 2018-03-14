@@ -1,6 +1,8 @@
 ﻿/*
   Author: Shay Pitcher
-  Function: To move a platform from one position to another 
+
+  Function: To move a platform from one position to another in single player levels 3 & 4. 
+
 */
 using System.Collections;
 using System.Collections.Generic;
@@ -14,7 +16,7 @@ public class MovingPlatform : MonoBehaviour
     public Vector3 newPos;
     public string currentPosition;
     public float smoothTransition;
-    public float reset;
+    public float reset; //moves the platform back to its starting position
 
     void Start()
     {
@@ -23,7 +25,8 @@ public class MovingPlatform : MonoBehaviour
 
     void FixedUpdate()
     {
-        movingBlock.position = Vector3.Lerp(movingBlock.position, newPos, smoothTransition * Time.deltaTime);
+        //platform moves from the starting platform to the ending platfrom
+        movingBlock.position = Vector3.Lerp(movingBlock.position, newPos, smoothTransition * Time.deltaTime); 
     }
 
     void ChangePosition()
